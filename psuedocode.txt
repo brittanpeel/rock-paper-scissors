@@ -1,0 +1,9 @@
+write a function called 'getComputerChoice' that will randomly choose 'Rock', 'Paper', or 'Scissors' from an array
+write a function that plays a single round of R.P.S. with two parameters - 'playerSelection' and 'computerSelection' computerSelection will call from the function 'getComputerChoice' and 'playerSelection' will take an input from the user
+Return a string that declares the winner of the round "You Lose! Paper beats Rock" or "You Win! Paper beats Rock"
+make sure the 'playerSelection' is case-insensetive so users can input 'rock', 'ROCK', 'Rock'
+Return the results of the round
+write a new function called 'game()'
+write a new function called 'playRound'
+Use loops to play 5 rounds
+use a prompt function get input from a user
