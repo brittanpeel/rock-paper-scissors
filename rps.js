@@ -47,7 +47,7 @@ function showScore() {
     );
 }
 
-function determineWinner() {
+function determineGame() {
     if (playerScore === 5) {
         return "you win";
     } else if (computerScore === 5) {
@@ -76,7 +76,7 @@ function playGame(e) {
     console.log(playRound(playerSelection, computerChoice));
     updateScore(playerSelection, computerChoice);
     showScore();
-    let result = determineWinner(playerSelection, computerChoice);
+    let result = determineGame();
     if (result === "you win") {
         showWinner(result);
         resetScores();
@@ -84,7 +84,7 @@ function playGame(e) {
         showWinner(result);
         resetScores();
     }
-    //console.log(determineWinner(playerSelection, computerChoice));
+    // console.log(determineWinner(playerSelection, computerChoice));
     console.log(updateScore(result));
 }
 
