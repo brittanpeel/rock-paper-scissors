@@ -1,14 +1,8 @@
 const array = ["rock", "paper", "scissors"];
 
-function getComputerChoice() {
-    const computerSelection = array[Math.floor(Math.random() * array.length)];
-    return computerSelection;
-}
-
 let rockButton = document.getElementById("rock");
 let paperButton = document.getElementById("paper");
 let scissorsButton = document.getElementById("scissors");
-
 let rockOutput = rock.value;
 let paperOutput = paper.value;
 let scissorsOutput = scissors.value;
@@ -20,6 +14,11 @@ rockButton.addEventListener("click", (e) => playGame(e));
 paperButton.addEventListener("click", (e) => playGame(e));
 
 scissorsButton.addEventListener("click", (e) => playGame(e));
+
+function getComputerChoice() {
+    const computerSelection = array[Math.floor(Math.random() * array.length)];
+    return computerSelection;
+}
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
