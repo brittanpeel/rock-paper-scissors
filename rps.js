@@ -3,9 +3,6 @@ const array = ["rock", "paper", "scissors"];
 let rockButton = document.getElementById("rock");
 let paperButton = document.getElementById("paper");
 let scissorsButton = document.getElementById("scissors");
-let rockOutput = rock.value;
-let paperOutput = paper.value;
-let scissorsOutput = scissors.value;
 let playerScore = 0;
 let computerScore = 0;
 
