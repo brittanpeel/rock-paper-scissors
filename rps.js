@@ -68,9 +68,9 @@ function resetScores() {
 }
 
 function playGame(e) {
-    const roundResult = playRound(playerSelection, computerSelection);
     const playerSelection = e.target.value;
     const computerChoice = getComputerChoice();
+    const roundResult = playRound(playerSelection, computerSelection);
     console.log(playRound(playerSelection, computerChoice));
     updateScore(roundResult);
     showScore();
