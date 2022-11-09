@@ -74,7 +74,7 @@ function playGame(e) {
     const playerSelection = e.target.value;
     const computerChoice = getComputerChoice();
     console.log(playRound(playerSelection, computerChoice));
-    updateScore(playerSelection, computerChoice);
+    updateScore(roundResult);
     showScore();
     let gameResult = determineGame();
     if (gameResult === "you win") {
@@ -88,6 +88,7 @@ function playGame(e) {
     console.log(updateScore(roundResult));
 }
 
+let roundResult = playRound();
 function updateScore(roundResult) {
     if (roundResult.includes("you win")) {
         playerScore += 1;
