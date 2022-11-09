@@ -41,14 +41,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function updateScore(result) {
-    if (result.includes("you win")) {
-        playerScore += 1;
-    } else if (result.includes("you lose")) {
-        computerScore += 1;
-    }
-}
-
 function showScore() {
     console.log(
         `Your score is: ${playerScore} and the computer's is: ${computerScore}`
@@ -94,4 +86,12 @@ function playGame(e) {
     }
     //console.log(determineWinner(playerSelection, computerChoice));
     console.log(updateScore(result));
+}
+
+function updateScore(result) {
+    if (result.includes("you win")) {
+        playerScore += 1;
+    } else if (result.includes("you lose")) {
+        computerScore += 1;
+    }
 }
