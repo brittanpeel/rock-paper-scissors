@@ -70,7 +70,7 @@ function resetScores() {
 function playGame(e) {
     const playerSelection = e.target.value;
     const computerChoice = getComputerChoice();
-    const roundResult = playRound(playerSelection, computerSelection);
+    const roundResult = playRound(playerSelection, computerChoice);
     console.log(playRound(playerSelection, computerChoice));
     updateScore(roundResult);
     showScore();
