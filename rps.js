@@ -42,9 +42,9 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function updateScore(result) {
-    if (result.includes("Win!")) {
+    if (result.includes("you win")) {
         playerScore += 1;
-    } else if (result.includes("Lose!")) {
+    } else if (result.includes("you lose")) {
         computerScore += 1;
     }
 }
@@ -92,4 +92,6 @@ function playGame(e) {
         showWinner(result);
         resetScores();
     }
+    //console.log(determineWinner(playerSelection, computerChoice));
+    console.log(updateScore(result));
 }
