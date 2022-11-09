@@ -57,10 +57,10 @@ function determineGame() {
     }
 }
 
-function showWinner(result) {
-    if (result === "you win") {
+function showWinner(gameResult) {
+    if (gameResult === "you win") {
         console.log("You Win!");
-    } else if (result === "you lose") {
+    } else if (gameResult === "you lose") {
         console.log("You Lost!");
     }
 }
@@ -76,22 +76,22 @@ function playGame(e) {
     console.log(playRound(playerSelection, computerChoice));
     updateScore(playerSelection, computerChoice);
     showScore();
-    let result = determineGame();
-    if (result === "you win") {
-        showWinner(result);
+    let gameResult = determineGame();
+    if (gameResult === "you win") {
+        showWinner(gameResult);
         resetScores();
-    } else if (result === "you lose") {
-        showWinner(result);
+    } else if (gameResult === "you lose") {
+        showWinner(gameResult);
         resetScores();
     }
     // console.log(determineWinner(playerSelection, computerChoice));
-    console.log(updateScore(result));
+    console.log(updateScore(roundResult));
 }
 
-function updateScore(result) {
-    if (result.includes("you win")) {
+function updateScore(roundResult) {
+    if (roundResult.includes("you win")) {
         playerScore += 1;
-    } else if (result.includes("you lose")) {
+    } else if (roundResult.includes("you lose")) {
         computerScore += 1;
     }
 }
