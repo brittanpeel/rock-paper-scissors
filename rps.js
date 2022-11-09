@@ -1,5 +1,4 @@
 const array = ["rock", "paper", "scissors"];
-
 const rockButton = document.getElementById("rock");
 const paperButton = document.getElementById("paper");
 const scissorsButton = document.getElementById("scissors");
@@ -7,9 +6,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 rockButton.addEventListener("click", (e) => playGame(e));
-
 paperButton.addEventListener("click", (e) => playGame(e));
-
 scissorsButton.addEventListener("click", (e) => playGame(e));
 
 function getComputerChoice() {
@@ -88,7 +85,6 @@ function playGame(e) {
     console.log(updateScore(roundResult));
 }
 
-let roundResult = playRound();
 function updateScore(roundResult) {
     if (roundResult.includes("you win")) {
         playerScore += 1;
