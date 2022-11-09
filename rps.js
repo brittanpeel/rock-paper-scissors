@@ -68,6 +68,7 @@ function resetScores() {
 }
 
 function playGame(e) {
+    const roundResult = playRound(playerSelection, computerSelection);
     const playerSelection = e.target.value;
     const computerChoice = getComputerChoice();
     console.log(playRound(playerSelection, computerChoice));
@@ -81,14 +82,12 @@ function playGame(e) {
         showWinner(gameResult);
         resetScores();
     }
-    // console.log(determineWinner(playerSelection, computerChoice));
-    console.log(updateScore(roundResult));
 }
 
 function updateScore(roundResult) {
-    if (roundResult.includes("you win")) {
+    if (roundResult.includes("You Win!")) {
         playerScore += 1;
-    } else if (roundResult.includes("you lose")) {
+    } else if (roundResult.includes("You Lose!")) {
         computerScore += 1;
     }
 }
