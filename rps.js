@@ -2,6 +2,9 @@ const array = ["rock", "paper", "scissors"];
 const rockButton = document.getElementById("rock");
 const paperButton = document.getElementById("paper");
 const scissorsButton = document.getElementById("scissors");
+const scorePara = document.getElementByClass("score");
+const roundPara = document.getElementByClass("round");
+const winOrLosePara = document.getElementByClass("winOrLose");
 let playerScore = 0;
 let computerScore = 0;
 
