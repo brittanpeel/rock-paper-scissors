@@ -2,9 +2,9 @@ const array = ["rock", "paper", "scissors"];
 const rockButton = document.getElementById("rock");
 const paperButton = document.getElementById("paper");
 const scissorsButton = document.getElementById("scissors");
-const scorePara = document.querySelector("score");
-const roundPara = document.querySelector("round");
-const winOrLosePara = document.querySelector("winOrLose");
+const scorePara = document.querySelector(".score");
+const roundPara = document.querySelector(".round");
+const winOrLosePara = document.querySelector(".winOrLose");
 let playerScore = 0;
 let computerScore = 0;
 
