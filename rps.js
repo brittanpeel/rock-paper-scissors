@@ -41,12 +41,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function showScore() {
-    console.log(
-        `Your score is: ${playerScore} and the computer's is: ${computerScore}`
-    );
-}
-
 function determineGame() {
     if (playerScore === 5) {
         return "you win";
@@ -59,9 +53,9 @@ function determineGame() {
 
 function showWinner(gameResult) {
     if (gameResult === "you win") {
-        console.log("You Win!");
+        winOrLosePara.textContent = "You Win!";
     } else if (gameResult === "you lose") {
-        console.log("You Lost!");
+        winOrLosePara.textContent = "You Lose!";
     }
 }
 
@@ -74,9 +68,7 @@ function playGame(e) {
     const playerSelection = e.target.value;
     const computerChoice = getComputerChoice();
     const roundResult = playRound(playerSelection, computerChoice);
-    console.log(roundResult);
     updateScore(roundResult);
-    showScore();
     let gameResult = determineGame();
     if (gameResult === "you win") {
         showWinner(gameResult);
@@ -85,6 +77,8 @@ function playGame(e) {
         showWinner(gameResult);
         resetScores();
     }
+    scorePara.textContent = `${playerScore} : ${computerScore}`;
+    roundPara.textContent = roundResult;
 }
 
 function updateScore(roundResult) {
