@@ -1,13 +1,33 @@
+:root {
+    --pink: #d8315b;
+    --background-color: #1e1b18;
+    --light-blue: #3e92cc;
+}
+
+* {
+    font-family: Roboto;
+}
+
+html {
+    background-color: var(--background-color);
+}
+
 button:hover {
-    cursor: pointer;
+    color: var(--pink);
+    scale: 110%;
 }
 
 button {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    border: solid 1.5px var(--light-blue);
+    padding: 9;
     font: inherit;
     cursor: pointer;
     outline: inherit;
+}
+
+p {
+    color: white;
 }
